@@ -55,7 +55,7 @@ def generate_sha1(data):
     h.update(data.encode('utf-8'))
     return h.hexdigest()
 
-def generate_sha256(data):
+def generate_sha256(data): 
     h = SHA256.new()
     h.update(data.encode('utf-8'))
     return h.hexdigest()
