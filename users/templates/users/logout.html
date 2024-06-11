@@ -1,0 +1,14 @@
+{% extends "users/base.html" %} {% block title %}خروج{% endblock title %} {% block content %}
+<div class="card" style="width: 18rem;">
+    <div class="card-body">
+        <h5 class="card-title">شما خارج شده اید</h5>
+        <p class="card-text">
+            با تشکر از وقتی که گذاشتید، برای هر گونه نظر یا پیشنهادی با استفاده از آدرس ایمیل من با من تماس بگیرید.
+        </p>
+        <br>
+        <hr><a href="{% url 'login' %}" class="btn btn-primary">دوباره وارد شوید</a>
+    </div>
+</div>
+
+
+{% endblock content %}
