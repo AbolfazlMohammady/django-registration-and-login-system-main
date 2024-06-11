@@ -1,15 +1,14 @@
-{% extends "users/base.html" %} {% block title %} صفحه نخست {% endblock title%} {% block content %}
+{% extends "users/base.html" %} {% block title %} Home Page {% endblock title%} {% block content %}
 <div class="jumbotron">
-    <h1 class="display-4">خوش امدید, {{user.first_name.title|default:'Guest'}}</h1>
+    <h1 class="display-4">خوش امدی, {{user.first_name.title|default:'Guest'}}</h1>
     <p class="lead">
-        این هست <b>سیستم ثبت نام و ورود کاربر</b>رایانش
+        <b>سیستم ثبت نام و ورود کاربر</b>
     </p>
     <hr class="my-4">
     <p class="lead">
         {% if user.is_authenticated %}
-        <a class="btn btn-primary btn-lg" href="{% url 'logout' %}" role="button">Logout</a> {% else %}
-        <a class="btn btn-primary btn-lg" href="{% url 'login' %}" role="button">Sign in</a> {% endif %}
-
+        <a class="btn btn-primary btn-lg" href="{% url 'logout' %}" role="button">خارج شدن</a> {% else %}
+        <a class="btn btn-primary btn-lg" href="{% url 'login' %}" role="button">وارد شدن</a> {% endif %}
     </p>
 </div>
 
